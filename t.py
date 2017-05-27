@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 import l1
@@ -10,7 +10,7 @@ url_list = l1.i_scraper(url)
 
 print("Length ", len(url_list))
 
-with open('test.csv', 'w') as csvfile:
+with open('test.csv', 'w', encoding='utf-8') as csvfile:
     wr = csv.DictWriter(csvfile, 
                         fieldnames = ['url', 'first_name', 'last_name', 'email',
                                       'company_name', 'phone_number', 
